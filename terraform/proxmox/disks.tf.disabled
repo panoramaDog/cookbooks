@@ -1,0 +1,8 @@
+  # Persistence disk
+resource "proxmox_lxc_disk" "example_disk" {
+    storage      = "local-lvm"
+    size         = "10G" # Size of the disk
+    slot = "1"
+    container = "unifi-controller"
+    mp = /
+}
